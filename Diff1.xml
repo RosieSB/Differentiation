@@ -1,0 +1,3053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/sm1rjb/MASDA-student-views/Differentiation 1 - LaTeX and LaTeXML versions"?>
+<!--  %For LaTeXML: --><!--  %latexml Differentiation“ 1.tex __dest=LaTeXML/Diff1.xml --><!--  %latexmlpost LaTeXML/Diff1.xml __dest=LaTeXML/Differentiation“ 1.html __split __splitat=section __navigationtoc=context __javascript=”https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML˙HTMLorMML” __urlstyle=file __timestamp=0 --><!--  %% --><?latexml class="article" options="12pt"?>
+<?latexml package="fancyhdr,amsmath,amssymb,amsthm,graphicx,float,enumerate,parskip,latexml"?>
+<?latexml package="tikz,framed"?>
+<!--  %for framed --><?latexml package="hyperref" options="hide links"?>
+<!--  %Easier to read than “theoremstyle–example˝ __ no italics --><!--  %**** Differentiation 1.tex Line 25 **** --><?latexml package="geometry" options="margin=2.5cm,top=2cm,bottom=5cm"?>
+<!--  %For headers and footers on first page only. Change to “pagestyle–fancy˝ for headers and footers on every page. --><!--  %Adds a little vertical space --><!--  %Logos --><!--  %Author --><!--  %Date --><!--  %This makes everything apart from equations sans serif for readability --><?latexml package="sourcesanspro" options="default"?>
+<?latexml package="fontenc" options="T1"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title> Differentiation 1 </title>
+  <date role="creation"/>
+<!--  %For␣headers␣and␣footers␣on␣first␣page␣only. 
+     %****␣Differentiation␣1.tex␣Line␣50␣****-->  <para xml:id="p1">
+    <p>Differentiation is a method for calculating the gradient of a curve at a given point. On this sheet, we recap the definition of the derivative of a function in one variable and practice the method of differentiation from first principles.</p>
+  </para>
+  <para xml:id="p2">
+    <p>We will also revise the standard formula for the derivative of a power, and practice using it to differentiate polynomials. The problem set at the end of this resource includes some contextual questions to give a taste of how differentiation can be used to solve problems in the real world.</p>
+  </para>
+  <subsection xml:id="S0.SSx1">
+    <title>First Principles Differentiation</title>
+    <para xml:id="S0.SSx1.p1"/>
+    <theorem backgroundcolor="#F2F2F2" class="ltx_theorem_mydef" inlist="thm theorem:mydef" xml:id="Thmmydef1">
+      <tags>
+        <tag>Definition 1</tag>
+        <tag role="autoref">1</tag>
+        <tag role="refnum">1</tag>
+        <tag role="typerefnum">Definition 1</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Definition 1</text></tag><text font="bold">.</text></title>
+      <para xml:id="Thmmydef1.p1">
+        <p>The derivative of a function <Math mode="inline" tex="f" text="f" xml:id="Thmmydef1.p1.m1">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">f</XMTok>
+            </XMath>
+          </Math> at a point <Math mode="inline" tex="P=(a,f(a))" text="P = open-interval@(a, f * a)" xml:id="Thmmydef1.p1.m2">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="open-interval"/>
+                    <XMRef idref="Thmmydef1.p1.m2.2"/>
+                    <XMRef idref="Thmmydef1.p1.m2.3"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef1.p1.m2.2">a</XMTok>
+                    <XMTok role="PUNCT">,</XMTok>
+                    <XMApp xml:id="Thmmydef1.p1.m2.3">
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                      <XMDual>
+                        <XMRef idref="Thmmydef1.p1.m2.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef1.p1.m2.1">a</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math> on the curve <Math mode="inline" tex="y=f(x)" text="y = f * x" xml:id="Thmmydef1.p1.m3">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMTok font="italic" role="UNKNOWN">y</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmmydef1.p1.m3.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef1.p1.m3.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math> is</p>
+        <equation labels="LABEL:eq:f'(a)" xml:id="S0.E1">
+          <tags>
+            <tag>(1)</tag>
+            <tag role="autoref">Equation 1</tag>
+            <tag role="refnum">1</tag>
+          </tags>
+          <Math mode="display" tex="f^{\prime}(a)=\lim_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}." text="f ^ prime * a = (limit _ (h rightarrow 0))@((f * (a + h) - f * a) / h)" xml:id="S0.E1.m1">
+            <XMath>
+              <XMDual>
+                <XMRef idref="S0.E1.m1.4"/>
+                <XMWrap>
+                  <XMApp xml:id="S0.E1.m1.4">
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                        <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="S0.E1.m1.3"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.E1.m1.3">a</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" name="rightarrow" role="ARROW">→</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                          <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.E1.m1.2"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.E1.m1.2">
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.E1.m1.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" role="UNKNOWN" xml:id="S0.E1.m1.1">a</XMTok>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="PERIOD">.</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+    </theorem>
+    <para xml:id="S0.SSx1.p2">
+      <p>The rationale for this formula is the following: suppose <Math mode="inline" tex="Q" text="Q" xml:id="S0.SSx1.p2.m1">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">Q</XMTok>
+          </XMath>
+        </Math> is a second point on the curve, very close to <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p2.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math>.</p>
+    </para>
+    <figure inlist="lof" placement="H" xml:id="S0.F1">
+      <tags>
+        <tag>Figure 1</tag>
+        <tag role="autoref">Figure 1</tag>
+        <tag role="refnum">1</tag>
+        <tag role="typerefnum">Figure 1</tag>
+      </tags>
+      <graphics candidates="f'(a).png" class="ltx_centering" graphic="f'(a)" options="width=433.62pt" xml:id="S0.F1.g1"/>
+      <toccaption class="ltx_centering"><tag close=" ">1</tag>Two nearby points on a curve, connected by a straight line.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Figure 1</tag>Two nearby points on a curve, connected by a straight line.</caption>
+    </figure>
+    <para xml:id="S0.SSx1.p3">
+      <p>Provided <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p3.m1">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math> and <Math mode="inline" tex="Q" text="Q" xml:id="S0.SSx1.p3.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">Q</XMTok>
+          </XMath>
+        </Math> are very close together, the line <Math mode="inline" tex="L" text="L" xml:id="S0.SSx1.p3.m3">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">L</XMTok>
+          </XMath>
+        </Math> passing through both of these points will give a good approximation for the tangent line at <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p3.m4">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math>.</p>
+    </para>
+    <para xml:id="S0.SSx1.p4">
+      <p>Suppose that <Math mode="inline" tex="P=(a,f(a))" text="P = open-interval@(a, f * a)" xml:id="S0.SSx1.p4.m1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="open-interval"/>
+                  <XMRef idref="S0.SSx1.p4.m1.2"/>
+                  <XMRef idref="S0.SSx1.p4.m1.3"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx1.p4.m1.2">a</XMTok>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMApp xml:id="S0.SSx1.p4.m1.3">
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.SSx1.p4.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx1.p4.m1.1">a</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+          </XMath>
+        </Math> and <Math mode="inline" tex="Q=(a+h,f(a+h))" text="Q = open-interval@(a + h, f * (a + h))" xml:id="S0.SSx1.p4.m2">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMTok font="italic" role="UNKNOWN">Q</XMTok>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="open-interval"/>
+                  <XMRef idref="S0.SSx1.p4.m2.1"/>
+                  <XMRef idref="S0.SSx1.p4.m2.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="S0.SSx1.p4.m2.1">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                  </XMApp>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMApp xml:id="S0.SSx1.p4.m2.2">
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.SSx1.p4.m2.2.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.SSx1.p4.m2.2.1">
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+          </XMath>
+        </Math>, where <Math mode="inline" tex="h" text="h" xml:id="S0.SSx1.p4.m3">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+          </XMath>
+        </Math> is a very small number.</p>
+    </para>
+    <para xml:id="S0.SSx1.p5">
+      <p>The gradient of the straight line through <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p5.m1">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math> and <Math mode="inline" tex="Q" text="Q" xml:id="S0.SSx1.p5.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">Q</XMTok>
+          </XMath>
+        </Math> is given by the standard formula</p>
+      <equation xml:id="S0.Ex1">
+        <Math mode="display" tex="\text{Gradient of }L=\frac{\text{Change in }y}{\text{Change in }x}=\frac{f(a+h%&#10;)-f(a)}{h}" text="[Gradient of ] * L = ([Change in ] * y) / ([Change in ] * x) = (f * (a + h) - f * a) / h" xml:id="S0.Ex1.m1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="multirelation"/>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMText>Gradient of </XMText>
+                <XMTok font="italic" role="UNKNOWN">L</XMTok>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMText>Change in </XMText>
+                  <XMTok font="italic" role="UNKNOWN">y</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMText>Change in </XMText>
+                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.Ex1.m1.2"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex1.m1.2">
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.Ex1.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.1">a</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>As <Math mode="inline" tex="h" text="h" xml:id="S0.SSx1.p5.m3">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+          </XMath>
+        </Math> becomes very small, the point <Math mode="inline" tex="Q" text="Q" xml:id="S0.SSx1.p5.m4">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">Q</XMTok>
+          </XMath>
+        </Math> approaches <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p5.m5">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math>, and <Math mode="inline" tex="L" text="L" xml:id="S0.SSx1.p5.m6">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">L</XMTok>
+          </XMath>
+        </Math> becomes the tangent line at <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p5.m7">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math>. The gradient of <Math mode="inline" tex="L" text="L" xml:id="S0.SSx1.p5.m8">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">L</XMTok>
+          </XMath>
+        </Math> becomes the derivative of <Math mode="inline" tex="f" text="f" xml:id="S0.SSx1.p5.m9">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+          </XMath>
+        </Math> at <Math mode="inline" tex="P" text="P" xml:id="S0.SSx1.p5.m10">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+          </XMath>
+        </Math>, given by formula (<ref labelref="LABEL:eq:f'(a)"/>).</p>
+    </para>
+    <para xml:id="S0.SSx1.p6">
+      <p>Differentiation using (<ref labelref="LABEL:eq:f'(a)"/>) is sometimes called <emph font="italic">differentiation by first principles</emph>.</p>
+    </para>
+    <para xml:id="S0.SSx1.p7">
+      <p>Since we want to view the derivative as a funciton, we tend to use <Math mode="inline" tex="x" text="x" xml:id="S0.SSx1.p7.m1">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+          </XMath>
+        </Math> instead of <Math mode="inline" tex="a" text="a" xml:id="S0.SSx1.p7.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">a</XMTok>
+          </XMath>
+        </Math> in formula (<ref labelref="LABEL:eq:f'(a)"/>). Then, the derivative is given by</p>
+      <equation labels="LABEL:eq:f'(x)" xml:id="S0.E2">
+        <tags>
+          <tag>(2)</tag>
+          <tag role="autoref">Equation 2</tag>
+          <tag role="refnum">2</tag>
+        </tags>
+        <Math mode="display" tex="f^{\prime}(x)=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}" text="f ^ prime * x = (limit _ (h rightarrow 0))@((f * (x + h) - f * x) / h)" xml:id="S0.E2.m1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="equals" role="RELOP">=</XMTok>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMRef idref="S0.E2.m1.3"/>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok font="italic" role="UNKNOWN" xml:id="S0.E2.m1.3">x</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMApp>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                  <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                  <XMApp>
+                    <XMTok fontsize="70%" name="rightarrow" role="ARROW">→</XMTok>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                    <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                      <XMDual>
+                        <XMRef idref="S0.E2.m1.2"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S0.E2.m1.2">
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                      <XMDual>
+                        <XMRef idref="S0.E2.m1.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.E2.m1.1">x</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+    </para>
+    <theorem class="ltx_theorem_eg" inlist="thm theorem:eg" xml:id="Thmmydef2">
+      <tags>
+        <tag>Example 2</tag>
+        <tag role="autoref">2</tag>
+        <tag role="refnum">2</tag>
+        <tag role="typerefnum">Example 2</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Example 2</text></tag><text font="bold">.</text></title>
+      <para xml:id="Thmmydef2.p1">
+        <p>Differentiate <Math mode="inline" tex="f(x)=3x^{2}" text="f * x = 3 * x ^ 2" xml:id="Thmmydef2.p1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmmydef2.p1.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef2.p1.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                    <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math> from first principles.</p>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_sol" inlist="thm theorem:sol" xml:id="Thmsolx1">
+      <tags>
+        <tag>Solution</tag>
+        <tag role="typerefnum">Solution</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Solution</text></tag><text font="bold">.</text></title>
+      <para xml:id="Thmsolx1.p1">
+        <p>We use (<ref labelref="LABEL:eq:f'(x)"/>). Before we can evaluate the limit, we calculate <Math mode="inline" tex="\frac{f(x+h)-f(x)}{h}" text="(f * (x + h) - f * x) / h" xml:id="Thmsolx1.p1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+                <XMApp>
+                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="Thmsolx1.p1.m1.2"/>
+                      <XMWrap>
+                        <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="Thmsolx1.p1.m1.2">
+                          <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="Thmsolx1.p1.m1.1"/>
+                      <XMWrap>
+                        <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="Thmsolx1.p1.m1.1">x</XMTok>
+                        <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+              </XMApp>
+            </XMath>
+          </Math> for this particular function <Math mode="inline" tex="f(x)=3x^{2}" text="f * x = 3 * x ^ 2" xml:id="Thmsolx1.p1.m2">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmsolx1.p1.m2.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmsolx1.p1.m2.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                    <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>.</p>
+      </para>
+      <para xml:id="Thmsolx1.p2">
+        <p>We have</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx1.EGx1">
+          <equation xml:id="S0.Ex2">
+            <MathFork>
+              <Math tex="\displaystyle\frac{f(x+h)-f(x)}{h}=\frac{3(x+h)^{2}-3x^{2}}{h}" text="(f * (x + h) - f * x) / h = (3 * (x + h) ^ 2 - 3 * x ^ 2) / h" xml:id="S0.Ex2.m3">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.Ex2.m3.2"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="S0.Ex2.m3.2">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.Ex2.m3.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex2.m3.1">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                            <XMDual>
+                              <XMRef idref="S0.Ex2.m3.3"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex2.m3.3">
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right"><Math mode="inline" tex="\displaystyle\frac{f(x+h)-f(x)}{h}" text="(f * (x + h) - f * x) / h" xml:id="S0.Ex2.m1">
+                    <XMath>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.Ex2.m1.2"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex2.m1.2">
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.Ex2.m1.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex2.m1.1">x</XMTok>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                      </XMApp>
+                    </XMath>
+                  </Math></td>
+                <td align="left"><Math mode="inline" tex="\displaystyle=\frac{3(x+h)^{2}-3x^{2}}{h}" text="absent = (3 * (x + h) ^ 2 - 3 * x ^ 2) / h" xml:id="S0.Ex2.m2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMDual>
+                                  <XMRef idref="S0.Ex2.m2.1"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="S0.Ex2.m2.1">
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math></td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S0.Ex3">
+            <MathFork>
+              <Math tex="\displaystyle=\frac{3(x^{2}+2xh+h^{2})-3x^{2}}{h}" text="absent = (3 * (x ^ 2 + 2 * x * h + h ^ 2) - 3 * x ^ 2) / h" xml:id="S0.Ex3.m2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="absent"/>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.Ex3.m2.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="S0.Ex3.m2.1">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td/>
+                <td align="left"><Math mode="inline" tex="\displaystyle=\frac{3(x^{2}+2xh+h^{2})-3x^{2}}{h}" text="absent = (3 * (x ^ 2 + 2 * x * h + h ^ 2) - 3 * x ^ 2) / h" xml:id="S0.Ex3.m1">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMDual>
+                                <XMRef idref="S0.Ex3.m1.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="S0.Ex3.m1.1">
+                                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                      <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                      <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math></td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S0.Ex4">
+            <MathFork>
+              <Math tex="\displaystyle=\frac{3x^{2}+6xh+3h^{2}-3x^{2}}{h}" text="absent = ((3 * x ^ 2 + 6 * x * h + 3 * h ^ 2) - 3 * x ^ 2) / h" xml:id="S0.Ex4.m2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="absent"/>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="6" role="NUMBER">6</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td/>
+                <td align="left"><Math mode="inline" tex="\displaystyle=\frac{3x^{2}+6xh+3h^{2}-3x^{2}}{h}" text="absent = ((3 * x ^ 2 + 6 * x * h + 3 * h ^ 2) - 3 * x ^ 2) / h" xml:id="S0.Ex4.m1">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="6" role="NUMBER">6</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math></td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="S0.Ex5">
+            <MathFork>
+              <Math tex="\displaystyle=\frac{6xh+3h^{2}}{h}=6x+3h." text="absent = (6 * x * h + 3 * h ^ 2) / h = 6 * x + 3 * h" xml:id="S0.Ex5.m2">
+                <XMath>
+                  <XMDual>
+                    <XMRef idref="S0.Ex5.m2.1"/>
+                    <XMWrap>
+                      <XMApp xml:id="S0.Ex5.m2.1">
+                        <XMTok meaning="multirelation"/>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="6" role="NUMBER">6</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="6" role="NUMBER">6</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="PERIOD">.</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td/>
+                <td align="left"><Math mode="inline" tex="\displaystyle=\frac{6xh+3h^{2}}{h}=6x+3h." text="absent = (6 * x * h + 3 * h ^ 2) / h = 6 * x + 3 * h" xml:id="S0.Ex5.m1">
+                    <XMath>
+                      <XMDual>
+                        <XMRef idref="S0.Ex5.m1.1"/>
+                        <XMWrap>
+                          <XMApp xml:id="S0.Ex5.m1.1">
+                            <XMTok meaning="multirelation"/>
+                            <XMTok meaning="absent"/>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="6" role="NUMBER">6</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            </XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="6" role="NUMBER">6</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="PERIOD">.</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMath>
+                  </Math></td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>Letting <Math mode="inline" tex="h" text="h" xml:id="Thmsolx1.p2.m1">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+            </XMath>
+          </Math> tend to zero, we then get</p>
+        <equation xml:id="S0.Ex6">
+          <Math mode="display" tex="f^{\prime}(x)=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}=\lim_{h\rightarrow 0}%&#10;(6x+h)=6x." text="f ^ prime * x = (limit _ (h rightarrow 0))@((f * (x + h) - f * x) / h) = (limit _ (h rightarrow 0))@(6 * x + h) = 6 * x" xml:id="S0.Ex6.m1">
+            <XMath>
+              <XMDual>
+                <XMRef idref="S0.Ex6.m1.4"/>
+                <XMWrap>
+                  <XMApp xml:id="S0.Ex6.m1.4">
+                    <XMTok meaning="multirelation"/>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                        <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="S0.Ex6.m1.3"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex6.m1.3">x</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" name="rightarrow" role="ARROW">→</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                          <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.Ex6.m1.2"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex6.m1.2">
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.Ex6.m1.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex6.m1.1">x</XMTok>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" name="rightarrow" role="ARROW">→</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                          <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="S0.Ex6.m1.4.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S0.Ex6.m1.4.1">
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="6" role="NUMBER">6</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            </XMApp>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok meaning="6" role="NUMBER">6</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="PERIOD">.</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_ex" inlist="thm theorem:ex" labels="LABEL:ex:1stprinciples" xml:id="Thmmydef3">
+      <tags>
+        <tag>Exercise 3</tag>
+        <tag role="autoref">3</tag>
+        <tag role="refnum">3</tag>
+        <tag role="typerefnum">Exercise 3</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Exercise 3</text></tag><text font="bold">.</text></title>
+      <para xml:id="Thmmydef3.p1">
+        <p>Let <Math mode="inline" tex="f(x)=x^{3}" text="f * x = x ^ 3" xml:id="Thmmydef3.p1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmmydef3.p1.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef3.p1.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                  <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>.</p>
+        <enumerate xml:id="S0.I1">
+          <item xml:id="S0.I1.i1">
+            <tags>
+              <tag>(i)</tag>
+              <tag role="autoref">item i</tag>
+              <tag role="refnum">i</tag>
+              <tag role="typerefnum">item i</tag>
+            </tags>
+            <para xml:id="S0.I1.i1.p1">
+              <p>Calculate <Math mode="inline" tex="\displaystyle\frac{f(x+h)-f(x)}{h}" text="(f * (x + h) - f * x) / h" xml:id="S0.I1.i1.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.I1.i1.p1.m1.2"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="S0.I1.i1.p1.m1.2">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.I1.i1.p1.m1.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="S0.I1.i1.p1.m1.1">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+          <item xml:id="S0.I1.i2">
+            <tags>
+              <tag>(ii)</tag>
+              <tag role="autoref">item ii</tag>
+              <tag role="refnum">ii</tag>
+              <tag role="typerefnum">item ii</tag>
+            </tags>
+            <para xml:id="S0.I1.i2.p1">
+              <p>Hence use (<ref labelref="LABEL:eq:f'(x)"/>) to differentiate <Math mode="inline" tex="f(x)" text="f * x" xml:id="S0.I1.i2.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                      <XMDual>
+                        <XMRef idref="S0.I1.i2.p1.m1.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.I1.i2.p1.m1.1">x</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math> from first principles.</p>
+            </para>
+          </item>
+        </enumerate>
+      </para>
+    </theorem>
+  </subsection>
+  <subsection xml:id="S0.SSx2">
+    <title>Some Properties of Derivatives</title>
+    <subsubsection xml:id="S0.SSx2.SSSx1">
+      <title>Linearity Property</title>
+      <para xml:id="S0.SSx2.SSSx1.p1">
+        <inline-block backgroundcolor="#F2F2F2" cssstyle="padding-top:12pt;padding-bottom:12pt">
+          <p>If two functions <Math mode="inline" tex="f(x)" text="f * x" xml:id="S0.SSx2.SSSx1.p1.m1">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="S0.SSx2.SSSx1.p1.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx2.SSSx1.p1.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math> and <Math mode="inline" tex="g(x)" text="g * x" xml:id="S0.SSx2.SSSx1.p1.m2">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">g</XMTok>
+                  <XMDual>
+                    <XMRef idref="S0.SSx2.SSSx1.p1.m2.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx2.SSSx1.p1.m2.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math> are differentiable, and <Math mode="inline" tex="a" text="a" xml:id="S0.SSx2.SSSx1.p1.m3">
+              <XMath>
+                <XMTok font="italic" role="UNKNOWN">a</XMTok>
+              </XMath>
+            </Math> and <Math mode="inline" tex="b" text="b" xml:id="S0.SSx2.SSSx1.p1.m4">
+              <XMath>
+                <XMTok font="italic" role="UNKNOWN">b</XMTok>
+              </XMath>
+            </Math> are constants, then the derivative of <Math mode="inline" tex="af(x)+bg(x)" text="a * f * x + b * g * x" xml:id="S0.SSx2.SSSx1.p1.m5">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.SSx2.SSSx1.p1.m5.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx2.SSSx1.p1.m5.1">x</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">b</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">g</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.SSx2.SSSx1.p1.m5.2"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" role="UNKNOWN" xml:id="S0.SSx2.SSSx1.p1.m5.2">x</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math> is</p>
+          <equation xml:id="S0.Ex7">
+            <Math mode="display" tex="\frac{d}{dx}\left(af(x)+bg(x)\right)=af^{\prime}(x)+bg^{\prime}(x)." text="(d / (d * x)) * (a * f * x + b * g * x) = a * f ^ prime * x + b * g ^ prime * x" xml:id="S0.Ex7.m1">
+              <XMath>
+                <XMDual>
+                  <XMRef idref="S0.Ex7.m1.5"/>
+                  <XMWrap>
+                    <XMApp xml:id="S0.Ex7.m1.5">
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="S0.Ex7.m1.5.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="true">(</XMTok>
+                            <XMApp xml:id="S0.Ex7.m1.5.1">
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S0.Ex7.m1.1"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex7.m1.1">x</XMTok>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">b</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">g</XMTok>
+                                <XMDual>
+                                  <XMRef idref="S0.Ex7.m1.2"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex7.m1.2">x</XMTok>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="S0.Ex7.m1.3"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex7.m1.3">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">b</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">g</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="S0.Ex7.m1.4"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex7.m1.4">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PERIOD">.</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMath>
+            </Math>
+          </equation>
+        </inline-block>
+      </para>
+    </subsubsection>
+    <subsubsection xml:id="S0.SSx2.SSSx2">
+      <title>Differentiating Powers</title>
+<!--  %****␣Differentiation␣1.tex␣Line␣125␣**** -->      <para xml:id="S0.SSx2.SSSx2.p1">
+        <inline-block backgroundcolor="#F2F2F2" cssstyle="padding-top:12pt;padding-bottom:12pt">
+          <p><text font="bold">General rule:</text> For any non-zero real number <Math mode="inline" tex="r" text="r" xml:id="S0.SSx2.SSSx2.p1.m1">
+              <XMath>
+                <XMTok font="italic" role="UNKNOWN">r</XMTok>
+              </XMath>
+            </Math>,</p>
+          <equation labels="LABEL:eq:diffpowers" xml:id="S0.E3">
+            <tags>
+              <tag>(3)</tag>
+              <tag role="autoref">Equation 3</tag>
+              <tag role="refnum">3</tag>
+            </tags>
+            <Math mode="display" tex="\frac{d}{dx}\left(x^{r}\right)=rx^{r-1}." text="(d / (d * x)) * x ^ r = r * x ^ (r - 1)" xml:id="S0.E3.m1">
+              <XMath>
+                <XMDual>
+                  <XMRef idref="S0.E3.m1.1"/>
+                  <XMWrap>
+                    <XMApp xml:id="S0.E3.m1.1">
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="S0.E3.m1.1.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="true">(</XMTok>
+                            <XMApp xml:id="S0.E3.m1.1.1">
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">r</XMTok>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">r</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          <XMApp>
+                            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok font="italic" fontsize="70%" role="UNKNOWN">r</XMTok>
+                            <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PERIOD">.</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMath>
+            </Math>
+          </equation>
+        </inline-block>
+      </para>
+      <para xml:id="S0.SSx2.SSSx2.p2">
+        <p>Equation (<ref labelref="LABEL:eq:diffpowers"/>) may be used in conjunction with the linearity property for derivatives to differentiate any linear combination of powers of <Math mode="inline" tex="x^{r}" text="x ^ r" xml:id="S0.SSx2.SSSx2.p2.m1">
+            <XMath>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN">r</XMTok>
+              </XMApp>
+            </XMath>
+          </Math>.</p>
+      </para>
+      <theorem class="ltx_theorem_eg" inlist="thm theorem:eg" xml:id="Thmmydef4">
+        <tags>
+          <tag>Example 4</tag>
+          <tag role="autoref">4</tag>
+          <tag role="refnum">4</tag>
+          <tag role="typerefnum">Example 4</tag>
+        </tags>
+        <title class="ltx_runin"><tag><text font="bold">Example 4</text></tag><text font="bold">.</text></title>
+        <para xml:id="Thmmydef4.p1">
+          <p>Use equation (<ref labelref="LABEL:eq:diffpowers"/>) to differentiate <Math mode="inline" tex="f(x)=3x^{2}-2\sqrt{x}+\frac{7}{x^{3}}" text="f * x = (3 * x ^ 2 - 2 * square-root@(x)) + 7 / x ^ 3" xml:id="Thmmydef4.p1.m1">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMDual>
+                      <XMRef idref="Thmmydef4.p1.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" role="UNKNOWN" xml:id="Thmmydef4.p1.m1.1">x</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMApp>
+                          <XMTok meaning="square-root"/>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+                      <XMTok fontsize="70%" meaning="7" role="NUMBER">7</XMTok>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                        <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>.</p>
+        </para>
+      </theorem>
+      <theorem class="ltx_theorem_sol" inlist="thm theorem:sol" xml:id="Thmsolx2">
+        <tags>
+          <tag>Solution</tag>
+          <tag role="typerefnum">Solution</tag>
+        </tags>
+        <title class="ltx_runin"><tag><text font="bold">Solution</text></tag><text font="bold">.</text></title>
+        <para xml:id="Thmsolx2.p1">
+          <p>First we rewrite the expression for <Math mode="inline" tex="f(x)" text="f * x" xml:id="Thmsolx2.p1.m1">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmsolx2.p1.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmsolx2.p1.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math> using power notation:</p>
+          <equation xml:id="S0.Ex8">
+            <Math mode="display" tex="f(x)=3x^{2}-3x^{\frac{1}{2}}+7x^{-3}." text="f * x = (3 * x ^ 2 - 3 * x ^ (1 / 2)) + 7 * x ^ (- 3)" xml:id="S0.Ex8.m1">
+              <XMath>
+                <XMDual>
+                  <XMRef idref="S0.Ex8.m1.2"/>
+                  <XMWrap>
+                    <XMApp xml:id="S0.Ex8.m1.2">
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                        <XMDual>
+                          <XMRef idref="S0.Ex8.m1.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex8.m1.1">x</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                <XMTok fontsize="50%" meaning="1" role="NUMBER">1</XMTok>
+                                <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PERIOD">.</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMath>
+            </Math>
+          </equation>
+          <p>By the linearity property for derivatives, we can calculate <Math mode="inline" tex="f^{\prime}(x)" text="f ^ prime * x" xml:id="Thmsolx2.p1.m2">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="Thmsolx2.p1.m2.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="Thmsolx2.p1.m2.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math> by differentiating term by term. Each term can be differentiating using the power rule (<ref labelref="LABEL:eq:diffpowers"/>). Hence</p>
+          <equationgroup class="ltx_eqn_align" xml:id="Sx1.EGx2">
+            <equation xml:id="S0.Ex9">
+              <MathFork>
+                <Math tex="\displaystyle f^{\prime}(x)=6x-3\cdot\frac{1}{2}x^{-\frac{1}{2}}+7(-3)x^{-4}" text="f ^ prime * x = (6 * x - (3 cdot (1 / 2)) * x ^ (- 1 / 2)) + 7 * (- 3) * x ^ (- 4)" xml:id="S0.Ex9.m3">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="S0.Ex9.m3.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex9.m3.1">x</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="6" role="NUMBER">6</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMApp>
+                              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMApp>
+                                <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                  <XMTok fontsize="50%" meaning="1" role="NUMBER">1</XMTok>
+                                  <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          <XMDual>
+                            <XMRef idref="S0.Ex9.m3.2"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="S0.Ex9.m3.2">
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math>
+                <MathBranch>
+                  <td align="right"><Math mode="inline" tex="\displaystyle f^{\prime}(x)" text="f ^ prime * x" xml:id="S0.Ex9.m1">
+                      <XMath>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="S0.Ex9.m1.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex9.m1.1">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMath>
+                    </Math></td>
+                  <td align="left"><Math mode="inline" tex="\displaystyle=6x-3\cdot\frac{1}{2}x^{-\frac{1}{2}}+7(-3)x^{-4}" text="absent = (6 * x - (3 cdot (1 / 2)) * x ^ (- 1 / 2)) + 7 * (- 3) * x ^ (- 4)" xml:id="S0.Ex9.m2">
+                      <XMath>
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMTok meaning="absent"/>
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="6" role="NUMBER">6</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMApp>
+                                  <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  <XMApp>
+                                    <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMApp>
+                                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMApp>
+                                      <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                      <XMTok fontsize="50%" meaning="1" role="NUMBER">1</XMTok>
+                                      <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              <XMDual>
+                                <XMRef idref="S0.Ex9.m2.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="S0.Ex9.m2.1">
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMApp>
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                      </XMath>
+                    </Math></td>
+                </MathBranch>
+              </MathFork>
+            </equation>
+            <equation xml:id="S0.Ex10">
+              <MathFork>
+                <Math tex="\displaystyle=6x-\frac{3}{2\sqrt{x}}-\frac{21}{x^{4}}." text="absent = 6 * x - 3 / (2 * square-root@(x)) - 21 / x ^ 4" xml:id="S0.Ex10.m2">
+                  <XMath>
+                    <XMDual>
+                      <XMRef idref="S0.Ex10.m2.1"/>
+                      <XMWrap>
+                        <XMApp xml:id="S0.Ex10.m2.1">
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMTok meaning="absent"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="6" role="NUMBER">6</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="square-root"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="21" role="NUMBER">21</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="PERIOD">.</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math>
+                <MathBranch>
+                  <td/>
+                  <td align="left"><Math mode="inline" tex="\displaystyle=6x-\frac{3}{2\sqrt{x}}-\frac{21}{x^{4}}." text="absent = 6 * x - 3 / (2 * square-root@(x)) - 21 / x ^ 4" xml:id="S0.Ex10.m1">
+                      <XMath>
+                        <XMDual>
+                          <XMRef idref="S0.Ex10.m1.1"/>
+                          <XMWrap>
+                            <XMApp xml:id="S0.Ex10.m1.1">
+                              <XMTok meaning="equals" role="RELOP">=</XMTok>
+                              <XMTok meaning="absent"/>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="6" role="NUMBER">6</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="square-root"/>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                  <XMTok meaning="21" role="NUMBER">21</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="PERIOD">.</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMath>
+                    </Math></td>
+                </MathBranch>
+              </MathFork>
+            </equation>
+          </equationgroup>
+        </para>
+      </theorem>
+      <theorem class="ltx_theorem_ex" inlist="thm theorem:ex" labels="LABEL:ex:diffpowers" xml:id="Thmmydef5">
+        <tags>
+          <tag>Exercise 5</tag>
+          <tag role="autoref">5</tag>
+          <tag role="refnum">5</tag>
+          <tag role="typerefnum">Exercise 5</tag>
+        </tags>
+        <title class="ltx_runin"><tag><text font="bold">Exercise 5</text></tag><text font="bold">.</text></title>
+        <para xml:id="Thmmydef5.p1">
+          <p>Use (<ref labelref="LABEL:eq:diffpowers"/>) to differentiate <Math mode="inline" tex="\displaystyle 15x-\frac{2}{\sqrt[3]{x}}-\frac{x^{4}}{2}" text="15 * x - 2 / nth-root@(3, x) - x ^ 4 / 2" xml:id="Thmmydef5.p1.m1">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok meaning="15" role="NUMBER">15</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    <XMApp>
+                      <XMTok meaning="nth-root"/>
+                      <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                      <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                    </XMApp>
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math> with respect to <Math mode="inline" tex="x" text="x" xml:id="Thmmydef5.p1.m2">
+              <XMath>
+                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+              </XMath>
+            </Math>.</p>
+        </para>
+      </theorem>
+<!--  %****␣Differentiation␣1.tex␣Line␣150␣**** 
+     %\iflatexml
+     %\begin{center}
+     %\vspace*{1pt}␣%␣Adds␣a␣little␣vertical␣space
+     %\begin{tabular}{lcccr}
+     %\includegraphics[width=3cm]{UoS.jpg}␣&amp;␣\includegraphics[width=10cm]{blank.png}␣␣&amp;\includegraphics[width=1cm]{301.png}␣&amp;␣\includegraphics[width=10cm]{blank.png}␣␣&amp;␣\includegraphics[width=1.25cm]{MASH.png}␣%␣Logos
+     %\end{tabular}
+     %\end{center}
+     %\else
+     %\fi-->      <pagination role="newpage"/>
+    </subsubsection>
+  </subsection>
+  <section xml:id="Sx1">
+    <title>Solutions to Exercises</title>
+    <para class="ltx_noindent" xml:id="Sx1.p1">
+      <p><text font="bold">Solution to Exercise <ref labelref="LABEL:ex:1stprinciples"/>:</text></p>
+      <enumerate xml:id="Sx1.I2">
+        <item xml:id="Sx1.I2.i1">
+          <tags>
+            <tag>(i)</tag>
+            <tag role="autoref">item i</tag>
+            <tag role="refnum">i</tag>
+            <tag role="typerefnum">item i</tag>
+          </tags>
+          <para xml:id="Sx1.I2.i1.p1">
+            <p>We have <Math mode="inline" tex="f(x)=x^{3}" text="f * x = x ^ 3" xml:id="Sx1.I2.i1.p1.m1">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                      <XMDual>
+                        <XMRef idref="Sx1.I2.i1.p1.m1.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="Sx1.I2.i1.p1.m1.1">x</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                      <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>, and so</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx1.EGx3">
+              <equation xml:id="Sx1.Ex11">
+                <MathFork>
+                  <Math tex="\displaystyle\frac{f(x+h)-f(x)}{h}=\frac{(x+h)^{3}-x^{3}}{h}" text="(f * (x + h) - f * x) / h = ((x + h) ^ 3 - x ^ 3) / h" xml:id="Sx1.Ex11.m3">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                              <XMDual>
+                                <XMRef idref="Sx1.Ex11.m3.2"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="Sx1.Ex11.m3.2">
+                                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                              <XMDual>
+                                <XMRef idref="Sx1.Ex11.m3.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="Sx1.Ex11.m3.1">x</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMDual>
+                                <XMRef idref="Sx1.Ex11.m3.3"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="Sx1.Ex11.m3.3">
+                                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                  <MathBranch>
+                    <td align="right"><Math mode="inline" tex="\displaystyle\frac{f(x+h)-f(x)}{h}" text="(f * (x + h) - f * x) / h" xml:id="Sx1.Ex11.m1">
+                        <XMath>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                                <XMDual>
+                                  <XMRef idref="Sx1.Ex11.m1.2"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMApp xml:id="Sx1.Ex11.m1.2">
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    </XMApp>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                                <XMDual>
+                                  <XMRef idref="Sx1.Ex11.m1.1"/>
+                                  <XMWrap>
+                                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN" xml:id="Sx1.Ex11.m1.1">x</XMTok>
+                                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                          </XMApp>
+                        </XMath>
+                      </Math></td>
+                    <td align="left"><Math mode="inline" tex="\displaystyle=\frac{(x+h)^{3}-x^{3}}{h}" text="absent = ((x + h) ^ 3 - x ^ 3) / h" xml:id="Sx1.Ex11.m2">
+                        <XMath>
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMDual>
+                                    <XMRef idref="Sx1.Ex11.m2.1"/>
+                                    <XMWrap>
+                                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                      <XMApp xml:id="Sx1.Ex11.m2.1">
+                                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                        <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                      </XMApp>
+                                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                  <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMath>
+                      </Math></td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+              <equation xml:id="Sx1.Ex12">
+                <MathFork>
+                  <Math tex="\displaystyle=\frac{x^{3}+3hx^{2}+3h^{2}x+h^{3}-x^{3}}{h}" text="absent = ((x ^ 3 + 3 * h * x ^ 2 + 3 * h ^ 2 * x + h ^ 3) - x ^ 3) / h" xml:id="Sx1.Ex12.m2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                  <MathBranch>
+                    <td/>
+                    <td align="left"><Math mode="inline" tex="\displaystyle=\frac{x^{3}+3hx^{2}+3h^{2}x+h^{3}-x^{3}}{h}" text="absent = ((x ^ 3 + 3 * h * x ^ 2 + 3 * h ^ 2 * x + h ^ 3) - x ^ 3) / h" xml:id="Sx1.Ex12.m1">
+                        <XMath>
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                      <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                      <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                    <XMApp>
+                                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                      <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                      <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                    </XMApp>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                    <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                    <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMath>
+                      </Math></td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+              <equation xml:id="Sx1.Ex13">
+                <MathFork>
+                  <Math tex="\displaystyle=\frac{3hx^{2}++3h^{2}x+h^{3}}{h}=3x^{2}+3hx+h^{2}" text="absent = [3hx2++3h2x+h3] / h = 3 * x ^ 2 + 3 * h * x + h ^ 2" xml:id="Sx1.Ex13.m2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="multirelation"/>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMArg>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                          </XMArg>
+                          <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                        </XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                  <MathBranch>
+                    <td/>
+                    <td align="left"><Math mode="inline" tex="\displaystyle=\frac{3hx^{2}++3h^{2}x+h^{3}}{h}=3x^{2}+3hx+h^{2}" text="absent = [3hx2++3h2x+h3] / h = 3 * x ^ 2 + 3 * h * x + h ^ 2" xml:id="Sx1.Ex13.m1">
+                        <XMath>
+                          <XMApp>
+                            <XMTok meaning="multirelation"/>
+                            <XMTok meaning="absent"/>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMArg>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                              </XMArg>
+                              <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                            </XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMath>
+                      </Math></td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+          </para>
+        </item>
+        <item xml:id="Sx1.I2.i2">
+          <tags>
+            <tag>(ii)</tag>
+            <tag role="autoref">item ii</tag>
+            <tag role="refnum">ii</tag>
+            <tag role="typerefnum">item ii</tag>
+          </tags>
+          <para xml:id="Sx1.I2.i2.p1">
+            <p>Hence</p>
+            <equation xml:id="Sx1.Ex14">
+              <Math mode="display" tex="f^{\prime}(x)=\lim_{h\rightarrow 0}\left(3x^{2}+3hx+h^{2}\right)=3x^{2}." text="f ^ prime * x = (limit _ (h rightarrow 0))@(3 * x ^ 2 + 3 * h * x + h ^ 2) = 3 * x ^ 2" xml:id="Sx1.Ex14.m1">
+                <XMath>
+                  <XMDual>
+                    <XMRef idref="Sx1.Ex14.m1.2"/>
+                    <XMWrap>
+                      <XMApp xml:id="Sx1.Ex14.m1.2">
+                        <XMTok meaning="multirelation"/>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="Sx1.Ex14.m1.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" role="UNKNOWN" xml:id="Sx1.Ex14.m1.1">x</XMTok>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                            <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                            <XMApp>
+                              <XMTok fontsize="70%" name="rightarrow" role="ARROW">→</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">h</XMTok>
+                              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="Sx1.Ex14.m1.2.1"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="true">(</XMTok>
+                              <XMApp xml:id="Sx1.Ex14.m1.2.1">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                    <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                    <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">h</XMTok>
+                                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="PERIOD">.</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMath>
+              </Math>
+            </equation>
+<!--  %****␣Differentiation␣1.tex␣Line␣175␣**** -->          </para>
+        </item>
+      </enumerate>
+    </para>
+    <para class="ltx_noindent" xml:id="Sx1.p2">
+      <p><text font="bold">Solution to Exercise <ref labelref="LABEL:ex:diffpowers"/>:</text></p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx1.EGx4">
+        <equation xml:id="Sx1.Ex15">
+          <MathFork>
+            <Math tex="\displaystyle\frac{d}{dx}\left(15x-\frac{2}{\sqrt[3]{x}}-\frac{x^{4}}{2}\right%&#10;)=\frac{d}{dx}\left(15x-2x^{\frac{1}{3}}-\frac{1}{2}x^{4}\right)" text="(d / (d * x)) * (15 * x - 2 / nth-root@(3, x) - x ^ 4 / 2) = (d / (d * x)) * (15 * x - 2 * x ^ (1 / 3) - (1 / 2) * x ^ 4)" xml:id="Sx1.Ex15.m3">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMDual>
+                      <XMRef idref="Sx1.Ex15.m3.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="true">(</XMTok>
+                        <XMApp xml:id="Sx1.Ex15.m3.1">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="15" role="NUMBER">15</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMApp>
+                              <XMTok meaning="nth-root"/>
+                              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                            </XMApp>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                      <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMDual>
+                      <XMRef idref="Sx1.Ex15.m3.2"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="true">(</XMTok>
+                        <XMApp xml:id="Sx1.Ex15.m3.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="15" role="NUMBER">15</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                <XMTok fontsize="50%" meaning="1" role="NUMBER">1</XMTok>
+                                <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right"><Math mode="inline" tex="\displaystyle\frac{d}{dx}\left(15x-\frac{2}{\sqrt[3]{x}}-\frac{x^{4}}{2}\right)" text="(d / (d * x)) * (15 * x - 2 / nth-root@(3, x) - x ^ 4 / 2)" xml:id="Sx1.Ex15.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                        <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="Sx1.Ex15.m1.1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="true">(</XMTok>
+                          <XMApp xml:id="Sx1.Ex15.m1.1">
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="15" role="NUMBER">15</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMApp>
+                                <XMTok meaning="nth-root"/>
+                                <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math></td>
+              <td align="left"><Math mode="inline" tex="\displaystyle=\frac{d}{dx}\left(15x-2x^{\frac{1}{3}}-\frac{1}{2}x^{4}\right)" text="absent = (d / (d * x)) * (15 * x - 2 * x ^ (1 / 3) - (1 / 2) * x ^ 4)" xml:id="Sx1.Ex15.m2">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="absent"/>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="Sx1.Ex15.m2.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="true">(</XMTok>
+                            <XMApp xml:id="Sx1.Ex15.m2.1">
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="15" role="NUMBER">15</XMTok>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMApp>
+                                    <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                    <XMTok fontsize="50%" meaning="1" role="NUMBER">1</XMTok>
+                                    <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMApp>
+                                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                  <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math></td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+        <equation xml:id="Sx1.Ex16">
+          <MathFork>
+            <Math tex="\displaystyle=15-2\cdot\frac{1}{3}x^{-\frac{2}{3}}-\frac{1}{2}\cdot 4x^{3}=15-%&#10;\frac{2}{3}x^{-\frac{2}{3}}-2x^{3}." text="absent = 15 - (2 cdot (1 / 3)) * x ^ (- 2 / 3) - ((1 / 2) cdot 4) * x ^ 3 = 15 - (2 / 3) * x ^ (- 2 / 3) - 2 * x ^ 3" xml:id="Sx1.Ex16.m2">
+              <XMath>
+                <XMDual>
+                  <XMRef idref="Sx1.Ex16.m2.1"/>
+                  <XMWrap>
+                    <XMApp xml:id="Sx1.Ex16.m2.1">
+                      <XMTok meaning="multirelation"/>
+                      <XMTok meaning="absent"/>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMTok meaning="15" role="NUMBER">15</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMTok meaning="15" role="NUMBER">15</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PERIOD">.</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td/>
+              <td align="left"><Math mode="inline" tex="\displaystyle=15-2\cdot\frac{1}{3}x^{-\frac{2}{3}}-\frac{1}{2}\cdot 4x^{3}=15-%&#10;\frac{2}{3}x^{-\frac{2}{3}}-2x^{3}." text="absent = 15 - (2 cdot (1 / 3)) * x ^ (- 2 / 3) - ((1 / 2) cdot 4) * x ^ 3 = 15 - (2 / 3) * x ^ (- 2 / 3) - 2 * x ^ 3" xml:id="Sx1.Ex16.m1">
+                  <XMath>
+                    <XMDual>
+                      <XMRef idref="Sx1.Ex16.m1.1"/>
+                      <XMWrap>
+                        <XMApp xml:id="Sx1.Ex16.m1.1">
+                          <XMTok meaning="multirelation"/>
+                          <XMTok meaning="absent"/>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="15" role="NUMBER">15</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMApp>
+                                <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMApp>
+                                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMApp>
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                    <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                    <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMApp>
+                                <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                                <XMApp>
+                                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="15" role="NUMBER">15</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMApp>
+                                <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMApp>
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok mathstyle="script" meaning="divide" role="FRACOP"/>
+                                    <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                                    <XMTok fontsize="50%" meaning="3" role="NUMBER">3</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                                <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="PERIOD">.</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math></td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+      <pagination role="newpage"/>
+    </para>
+  </section>
+</document>
