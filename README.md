@@ -1,3 +1,3 @@
 Differentiation example files for MASDA student views.
 
-html version is ``index.html''.
+Html version is ``index.html''.
