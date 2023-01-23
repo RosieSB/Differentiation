@@ -1,2 +1,3 @@
-# Differentiation-1---LaTeXML
-# Differentiation-1-LaTeXML
+Differentiation example files for MASDA student views.
+
+html version is ``index.html''.
