@@ -1,0 +1,25 @@
+latexmlpost (LaTeXML version 0.8.6) paginating /home/sm1rjb/MASDA-student-views/Differentiation 1 - LaTeX and LaTeXML versions/LaTeXML/Diff1.xml
+(post-processing...
+(Split index.html processing...
+ [Split into in 2 TOCs]
+ 0.00 sec)
+(Scan index.html processing...
+Scan: DBStatus: 190/0 objects
+ 0.02 sec)
+(Scan Sx1.html processing...
+Scan: DBStatus: 237/0 objects
+ 0.01 sec)
+(CrossRef index.html processing... 0.01 sec)
+(CrossRef Sx1.html processing... 0.01 sec)
+(Graphics index.html processing... 0.05 sec)
+(MathML::Presentation index.html 64 to process...
+converted 64 Maths
+ 0.10 sec)
+(MathML::Presentation Sx1.html 14 to process...
+converted 14 Maths
+ 0.04 sec)
+(XSLT[using LaTeXML-html5.xsl] index.html processing... 0.01 sec)
+(XSLT[using LaTeXML-html5.xsl] Sx1.html processing... 0.01 sec)
+(Writer index.html processing... 0.00 sec)
+(Writer Sx1.html processing... 0.00 sec) 0.27 sec)
+Postprocessing complete No obvious problems (reqd. 0.36s)
